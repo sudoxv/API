@@ -17,10 +17,10 @@ function ApiDocs() {
                     .swagger-ui .scheme-container {
                         border-radius: 10px;
                     }
-                `
+                `,
             }}
         />
-    )
+    );
 }
 
 export default ApiDocs;
