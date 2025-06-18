@@ -9,7 +9,7 @@ const options = {
             version: '1.0.0'
         }
     },
-    apis: [path.join(__dirname, 'pages/api/**/*.ts')]
+    apis: [path.join(process.cwd(), 'pages/api/**/*.ts')]
 }
 
 const specs = swaggerJsdoc(options);
