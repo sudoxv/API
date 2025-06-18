@@ -1,39 +1,39 @@
 import dynamic from 'next/dynamic';
 import 'swagger-ui-react/swagger-ui.css';
-import swaggerSpec from '../../swagger';
+import { useRouter } from 'next/router';
 
 const SwaggerUI = dynamic(() => import('swagger-ui-react'), { ssr: false });
 
-export default function ApiDocsPage() {
+const ApiDocs = () => {
+  const router = useRouter();
+  const { slug } = router.query;
+
   return (
     <div style={{ padding: 16 }}>
       <SwaggerUI
-        spec={swaggerSpec}
+        url="/api/swagger"
         docExpansion="none"
         defaultModelsExpandDepth={-1}
-        deepLinking
-        displayRequestDuration
-        persistAuthorization
-        tryItOutEnabled
-        supportedSubmitMethods={['get', 'post', 'put', 'delete']}
-        showExtensions
-        showCommonExtensions
-        displayOperationId
-        defaultModelExpandDepth={1}
-        defaultModelRendering="example"
-        plugins={[]}
-        layout="BaseLayout"
         options={{
           customCss: `
-            .swagger-ui .opblock {
+            .swagger-ui .topbar { background-color: #0f172a; }
+            .swagger-ui .topbar-wrapper img { content: url('https://nextjs.org/static/favicon/favicon-32x32.png'); height: 40px; }
+            .swagger-ui .opblock .opblock-summary {
               border-radius: 10px;
-              border: 1px solid #eee;
-              margin-bottom: 10px;
+              background-color: #f8fafc;
             }
-            .swagger-ui .topbar { display: none }
+            .swagger-ui .opblock-tag {
+              font-size: 18px;
+              color: #334155;
+              background: #e2e8f0;
+              border-radius: 6px;
+              padding: 6px;
+            }
           `,
         }}
       />
     </div>
   );
-}
+};
+
+export default ApiDocs;
