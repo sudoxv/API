@@ -1,5 +1,4 @@
 import swaggerJsdoc from 'swagger-jsdoc';
-import path from 'path';
 
 const options = {
     definition: {
@@ -14,7 +13,7 @@ const options = {
             }
         ]
     },
-    apis: [path.join(process.cwd(), 'pages/api/**/*.ts')]
+    apis: ["pages/api/**/*.ts"]
 }
 
 const specs = swaggerJsdoc(options);
