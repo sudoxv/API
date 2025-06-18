@@ -1,3 +1,21 @@
+// pages/api/stalk/tiktok.ts
+
+/**
+ * @openapi
+ * /api/stalk/tiktok:
+ *   get:
+ *     summary: Tiktok Stalker
+ *     parameters:
+ *       - in: query
+ *         name: username
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Data TikTok
+ */
+
 import { NextApiRequest, NextApiResponse } from 'next';
 import axios from 'axios';
 
