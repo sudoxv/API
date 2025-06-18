@@ -14,7 +14,7 @@ import axios from 'axios';
  *           type: string
  *     responses:
  *       200:
- *         description: Data TikTok
+ *         description: OK
  */
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
