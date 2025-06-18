@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import axios from 'axios';
 
 /**
- * @swagger
+ * @openapi
  * /api/stalk/tiktok:
  *   get:
  *     summary: Tiktok Stalker
