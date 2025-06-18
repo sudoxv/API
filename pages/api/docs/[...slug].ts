@@ -5,7 +5,7 @@ import specs from '../../../swagger';
 function ApiDocs() {
     return (
         <SwaggerUI
-            spec={specs}
+            swaggerSpec={specs}
             options={{
                 customCss: `
                     .swagger-ui .opblock .opblock-summary {
