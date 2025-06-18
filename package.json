@@ -1,20 +1,25 @@
 {
   "name": "API",
   "version": "1.0.0",
+  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "next": "^12.2.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "axios": "^0.27.2",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "swagger-jsdoc": "latest",
+    "swagger-ui-react": "latest"
   },
   "devDependencies": {
-    "@types/node": "^17.0.45",
-    "@types/react": "^18.0.17",
-    "axios": "^0.27.2",
-    "typescript": "^4.7.4"
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/swagger-jsdoc": "latest",
+    "typescript": "latest"
   }
 }
