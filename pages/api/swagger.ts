@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import specs from '../../../swagger'; // pastikan path ini benar
+import specs from '../../swagger'; // pastikan path ini benar
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.setHeader('Content-Type', 'application/json');
